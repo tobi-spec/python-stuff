@@ -1,4 +1,4 @@
-from designPatterns.factoryPattern.BuilderPattern.Car import Car
+from designPatterns.BuilderPattern.Car import Car
 
 
 class CarBuilder:
@@ -26,4 +26,3 @@ class CarBuilder:
 
     def build(self):
         return Car(self.id, self.brand, self.model, self.color)
-

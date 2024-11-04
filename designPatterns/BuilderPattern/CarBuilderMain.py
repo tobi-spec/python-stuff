@@ -1,4 +1,4 @@
-from designPatterns.factoryPattern.BuilderPattern.CarBuilder import CarBuilder
+from designPatterns.BuilderPattern.CarBuilder import CarBuilder
 
 car = CarBuilder()\
     .id(1)\
