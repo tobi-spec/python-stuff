@@ -1,4 +1,4 @@
-from designPatterns.SingletonPattern.singleton import Singleton
+from designPatterns.singletonPattern.singleton import Singleton
 
 singleton1 = Singleton()
 singleton1.show_message()

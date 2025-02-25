@@ -1,5 +1,5 @@
 import tkinter as tk
-from designPatterns.StatePattern.Phone import Phone
+from designPatterns.statePattern.Phone import Phone
 
 phone = Phone()
 

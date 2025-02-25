@@ -1,4 +1,4 @@
-from designPatterns.BuilderPattern.Car import Car
+from designPatterns.builderPattern.Car import Car
 
 
 class CarBuilder:
