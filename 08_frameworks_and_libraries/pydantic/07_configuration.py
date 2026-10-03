@@ -1,8 +1,6 @@
 from uuid import UUID, uuid4
 
-from pydantic import BaseModel, Field, ValidationError, EmailStr, HttpUrl, validator, SecretStr, ConfigDict
-from datetime import datetime
-from typing import Literal, Annotated
+from pydantic import BaseModel, Field, EmailStr, SecretStr, ConfigDict
 
 class User(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
