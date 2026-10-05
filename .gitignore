@@ -2,3 +2,5 @@
 *.pyc
 *.pyo
 .venv
+
+04_data/sql_alchemy/mydb.db

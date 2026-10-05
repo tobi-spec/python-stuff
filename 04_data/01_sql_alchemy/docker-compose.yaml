@@ -1,0 +1,16 @@
+services:
+  exampledb:
+      image: postgres:16
+      container_name: exampledb
+      environment:
+        POSTGRES_DB: exampledb
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: admin
+      ports:
+        - "5432:5432"
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+      restart: unless-stopped
+
+volumes:
+  postgres_data:
