@@ -13,3 +13,6 @@ print(my_set)
 
 my_dict = {"one": 1, "two": 2, "three": 3, "four": 4}
 print(my_dict)
+print(my_dict.items())
+print(my_dict.keys())
+print(my_dict.values())
