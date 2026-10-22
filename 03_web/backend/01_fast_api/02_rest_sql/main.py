@@ -1,21 +1,16 @@
-from fastapi import FastAPI
-from controller import get
-from database import database
+from typing import List
+
 import uvicorn
+from fastapi import FastAPI, Depends, HTTPException
+import services, database, schemas
+from sqlalchemy.orm import Session
 
 app = FastAPI()
 
-@app.on_event("startup")
-async def startup():
-    await database.connect()
+@app.get("/books", response_model=List[schemas.Book])
+def get_books_endpoint(db: Session = Depends(database.get_db)):
+    return services.get_books(db)
 
-@app.on_event("shutdown")
-async def shutdown():
-    await database.disconnect()
-
-app.include_router(get.router)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-
